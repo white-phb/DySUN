@@ -1,0 +1,132 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefad5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #001866;
+}
+
+table {
+    width: 100%; /* Adjusted to fill the entire screen width */
+    max-width: 800px; /* Limit the table width for readability */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/*kj*/
+tbody *:first-child {
+    border-right: solid;
+}
+
+.title-row {
+    display: flex;
+    place-content: center;
+}
+
+.title-column{
+    align-self: center
+}
+/*kj*/
+form {
+    width: 100%; /* Adjusted to fill the entire screen width */
+    max-width: 800px; /* Limit the container width for readability */
+    margin: 20px auto;
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.form-row {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    justify-content: space-between; /* Space items evenly */
+}
+
+.form-column {
+    flex: 1; /* Each column takes up an equal amount of space */
+    margin-right: 10px; /* Add some spacing between columns */
+}
+
+/* kj modified */
+#submit{
+    margin-top: 30px;
+    justify-content: center;
+}
+
+#submit input{
+    background-color: #477c17;
+    padding: 10px 25px;
+    border-color: transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    transition-duration: 0.3s;
+}
+
+#submit input:hover{
+    background-color: #83c348;
+}
+
+#icon {
+  max-width: 200px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+
+
+/* Media query for screens with a maximum width of 768px (typical phone screen size) */
+@media screen and (max-width: 768px) {
+    table, form {
+        width: 90%; /* Adjusted to fill the entire screen width */
+        max-width: none; /* Remove the maximum width */
+    }
+    .title-row{
+        flex-direction: column;
+    }
+}
