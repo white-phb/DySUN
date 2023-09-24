@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Yeelight Configuration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to external CSS file -->
+    <title>DySUN Configuration</title>
+</head>
+<body>
+    <div class="title-row">
+        <div class="title-column">
+            <h1>Welcome to &nbsp</h1>
+        </div>
+        <div class="title-column" id="icon">
+            <img src="{{ url_for('static', filename='icon.png') }}">
+        </div>
+        <div class="title-column">
+            <h1>&nbsp Configuration</h1>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>Action Type</th>
+            <th>Setting</th>
+        </tr>
+        {% for action, value in action_values.items() %}
+        <tr>
+            <td>{{ action }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form method="POST" action="/configure" onsubmit="return validateForm();">
+        <div class="form-row">
+            <div class="form-column">
+                <label for="action-type">Action Type:</label>
+                <select id="action-type" name="action-type">
+                    {% for action, value in action_values.items() %}
+                    <option value="{{ action }}">{{ action }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-column">
+                <label for="temperature">Temperature:</label>
+                <input type="text" id="temperature" name="temperature">
+            </div>
+        </div>
+        <div class="form-row" id="submit">
+            <input type="submit" value="Update" >
+        </div>
+    </form>
+</body>
+
+
+<script>
+    // Function to display an alert popup with the error message
+    function showErrorPopup(message) {
+        alert(message);
+    }
+
+    // Function to validate the form before submission
+    function validateForm() {
+        var numericValue = document.getElementById('temperature').value;
+        
+        if (!(2700 <= numericValue && numericValue <= 6500)) {
+            showErrorPopup('Value must be between 2700 and 6500');
+            return false; // Prevent form submission
+        }
+        
+        return true; // Allow form submission
+    }
+
+    // Attach the validateForm function to the form's onsubmit event
+    //document.getElementById('configure-form').onsubmit = validateForm;
+</script>
+
+</html>
