@@ -8,7 +8,6 @@ create folder with following structure:
 /server
 
   ~/model_param
-  
     ~/model.h5
     ~/model.json
     
