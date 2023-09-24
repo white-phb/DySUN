@@ -6,12 +6,16 @@ Download server.py, yeelight_server.py and the tensorflow model file.
 :On Server site:
 create folder with following structure:
 /server
-  ./model_param
-    ./model.h5
-    ./model.json
-  ./static
-    ./icon.png
-    ./styles.css
+
+  ~/model_param
+  
+    ~/model.h5
+    ~/model.json
+    
+  ~/static
+  
+    ~/icon.png
+    ~/styles.css
   ./template
     ./config.html
   ./uploads
