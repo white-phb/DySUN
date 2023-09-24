@@ -3,12 +3,12 @@ UTAR Final Year Project 2
 
 Download server.py, yeelight_server.py and the tensorflow model file.
 
-:On Server site.
+On Server site --
 create folder with following structure:
--server
-  -model_param
-    -model.h5
-    -model.json
+server
+  model_param
+    model.h5
+    model.json
     
   ~/static
   
