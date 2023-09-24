@@ -3,27 +3,24 @@ UTAR Final Year Project 2
 
 Download server.py, yeelight_server.py and the tensorflow model file
 
-On Server site
+:On Server site
 
-create folder with following structure:
+:create folder with following structure:
 
 server
-
-  model_param
-    model.h5
-    model.json
-    
-  ~/static
-  
-    ~/icon.png
-    ~/styles.css
-  ./template
+  /model_param
+    ./model.h5
+    ./model.json
+  /static
+    ./icon.png
+    ./styles.css
+  /template
     ./config.html
-  ./uploads
-  ./docker-compose.yml
-  ./Dockerfile
-  ./requirements.txt
-  ./server.py
+  /uploads
+  /docker-compose.yml
+  /Dockerfile
+  /requirements.txt
+  /server.py
 
 :save yeelight_server.py on the microcontroller
   :remember to change the path to your tensorflow model in server.py
