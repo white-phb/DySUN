@@ -23,10 +23,12 @@ server
   /server.py
 
 :save yeelight_server.py on the microcontroller
-  :remember to change the path to your tensorflow model in server.py
+
+  *remember to change the path to your tensorflow model in server.py
 
 :use docker-compose build to create the image and start container
-  :remember to change the ip of your server in yeelight_server.py
+
+  "remember to change the ip of your server in yeelight_server.py
 
 :start server first, then run yeelight_server.py
 
