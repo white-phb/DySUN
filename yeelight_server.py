@@ -71,7 +71,7 @@ def gstreamer_pipeline(
 
 def main():
     prev_result = 10
-    class_list = ['dining', 'drawing','mopping floor', 'reading book','running on treadmill', 'sleeping', 'watching tv']
+    class_list = ['dining', 'drawing','mopping floor', 'reading book','running on treadmill', 'sleeping', 'watching tv', 'yoga']
     for chance in range(5):
         discovered, yeelight = create_yeelight()
         if not discovered:
